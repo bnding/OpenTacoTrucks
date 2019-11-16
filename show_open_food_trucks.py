@@ -50,6 +50,8 @@ def getOpenTrucks(data):
                   (getTruckHours(x['end24']) > today))
                   ]
 
+    # Applying lambda function to sort truck names alphabetically
+    openTrucks.sort(key=lambda x: x['applicant'])
     return openTrucks
 
 # Printing trucks every 10 times
@@ -62,7 +64,7 @@ def printTrucks(trucks):
 
         count+=1
     print("\n\nAll trucks are now listed.")
-    
+
 # Excecuting code here
 def main():
     mainData = getData()
@@ -71,6 +73,7 @@ def main():
     if(openTrucks == [] or openTrucks == None):
         print("No food trucks currently available.")
     else:
+        print("\nPrinting currently open food trucks...\n\n")
         printTrucks(openTrucks)
 
 if __name__ == '__main__':
