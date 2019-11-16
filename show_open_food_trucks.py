@@ -50,7 +50,7 @@ def getOpenTrucks(data):
                   (getTruckHours(x['end24']) > today))
                   ]
 
-    # Applying lambda function to sort truck names alphabetically
+    # Applying lambda function to sort truck names alphabetically. Not using sorted --> No need to save the original order of openTrucks
     openTrucks.sort(key=lambda x: x['applicant'])
     return openTrucks
 
