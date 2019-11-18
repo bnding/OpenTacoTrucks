@@ -45,7 +45,7 @@ def getOpenTrucks(data):
                   (getTruckHours(x['end24']) > today))
                   ]
 
-    # Applying lambda function to sort truck names alphabetically
+    # Applying lambda function to sort truck names alphabetically. Built in sort uses timsort
     openTrucks.sort(key=lambda x: x['applicant'])
     return openTrucks
 
@@ -69,6 +69,7 @@ def main():
 
     if(openTrucks == [] or openTrucks == None):
         print("No food trucks currently available.")
+        return
     else:
         print("\nPrinting currently open food trucks...\n\n")
         printTrucks(openTrucks)
