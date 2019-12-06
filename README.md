@@ -1,19 +1,19 @@
-#Open Taco Trucks using Command Line
+# Open Taco Trucks using Command Line
 
 Project is complete using Python3.
 
-##Dependencies
+## Dependencies
 * requests
 * datetime
 * json
 
-##Program Build
+## Program Build
 
 
-##Running the Program
+## Running the Program
 `python3 show_open_food_trucks.py`
 
-###Running this on Sunday 10:38PM gave me the following code:
+### Running this on Sunday 10:38PM gave me the following code:
 
 	Printing currently open food trucks...
 
@@ -31,16 +31,16 @@ Project is complete using Python3.
 
 	All trucks are now listed.
 
-##Testing code for different time and day
+## Testing code for different time and day
 
-####Changing the time
+#### Changing the time
 In the function `getOpenTrucks(data)` call the function `today.replace()` at the line after declaring `today = datetime.datetime.now()`
 
 `today = today.replace(hour=23, minute=30, second=0, microsecond=0)`
 
 Will change the time to 11:30PM
 
-####Changing the day
+#### Changing the day
 **It is very important that we change the day in both functions `getOpenTrucks(data)` and `getTruckHours(time)`**
 
 
